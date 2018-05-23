@@ -1,13 +1,13 @@
-<div>
+<div class='darkest'>
 	<label>Movie Name:<input [(ngModel)]="movieName"
 		placeholder="name"></label>
-	<button  md-button (click)="searchMovie()">Search</button>
-	
-		Title {{movie.Title}}<bR>
-	Year {{movie.Year}}<bR>
-	Release {{movie.Released}}<bR>
-	Duration {{movie.Runtime}}<bR>
-	Director {{movie.Director}}<bR>
-	Writer {{movie.Writer}}<bR>
-	Plot {{movie.Plot}}<bR>
+	<button md-button (click)="searchMovie()">Search</button>
+	<div class='movieName'>{{movie.Title}}</div>
+	<div class='votes'>
+		{{movie.imdbRating | number : 0}}
+		<span class="stars-container stars-{{movie.imdbRating | number : 0}}">★★★★★</span>
+		{{movie.imdbVotes}} votes.
+	</div>
+	<div><img src="{{movie.Poster}}" /></div>
+	<div>{{movie.Plot}}</div>
 </div>
