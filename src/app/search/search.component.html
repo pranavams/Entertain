@@ -4,8 +4,7 @@
 	<button md-button (click)="searchMovie()">Search</button>
 	<div class='movieName'>{{movie.Title}}</div>
 	<div class='votes'>
-		{{movie.imdbRating | number : 0}}
-		<span class="stars-container stars-{{movie.imdbRating | number : 0}}">★★★★★</span>
+		<span class="stars-container stars-{{movie.imdbRating | number : '1.0-0'}}">★★★★★</span>
 		{{movie.imdbVotes}} votes.
 	</div>
 	<div><img src="{{movie.Poster}}" /></div>
